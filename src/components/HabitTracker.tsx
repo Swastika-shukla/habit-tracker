@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, CartesianGrid } from 'recharts';
-import { FiMenu, FiX, FiSun, FiMoon, FiPlus, FiEdit2, FiTrash2, FiCalendar, FiTrendingUp, FiTarget, FiSettings, FiBarChart2, FiCheckCircle, FiAward } from 'react-icons/fi';
+import { FiX, FiPlus, FiEdit2, FiTrash2, FiCalendar, FiTrendingUp, FiTarget, FiSettings, FiBarChart2, FiCheckCircle, FiAward } from 'react-icons/fi';
 import confetti from 'canvas-confetti';
 
 // --- Mock Data ---
@@ -511,7 +511,7 @@ const HabitTracker: React.FC = () => {
                             transition={{ duration: 0.3 }}
                         >
                             <h1 className="text-2xl font-semibold mb-2">Welcome back, {user.name.split(' ')[0]}!</h1>
-                            <p className={`mb-6 ${darkMode ? "text-gray-400" : "text-gray-600"} text-sm`}>Here's your progress overview.</p>
+                            <p className={`mb-6 ${darkMode ? "text-gray-400" : "text-gray-600"} text-sm`}>Here&apos;s your progress overview.</p>
 
                             {/* Stats Overview */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -556,7 +556,7 @@ const HabitTracker: React.FC = () => {
 
 
                             {/* Today's Habits */}
-                            <h2 className="text-xl font-semibold mb-4">Today's Habits</h2>
+                            <h2 className="text-xl font-semibold mb-4">Today&apos;s Habits</h2>
                              {habits.filter(h => h.frequency === 'daily').length > 0 ? (
                                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                      <AnimatePresence>
@@ -572,7 +572,7 @@ const HabitTracker: React.FC = () => {
                              {/* Weekly Habits (Optional Section) */}
                              {habits.filter(h => h.frequency === 'weekly').length > 0 && (
                                  <>
-                                     <h2 className="text-xl font-semibold mt-8 mb-4">This Week's Habits</h2>
+                                     <h2 className="text-xl font-semibold mt-8 mb-4">This Week&apos;s Habits</h2>
                                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                          <AnimatePresence>
                                              {habits.filter(h => h.frequency === 'weekly').map((habit) => (
@@ -712,8 +712,8 @@ const HabitTracker: React.FC = () => {
                                      ))}
                                  </div>
                              ) : (
-                                <p className={`text-center p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} text-gray-500 dark:text-gray-400`}>You haven't added any habits yet. Click "Add New Habit" to get started!</p>
-                             )}
+                                <p className={`text-center p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} text-gray-500 dark:text-gray-400`}>You haven&apos;t added any habits yet. Click &quot;Add New Habit&quot; to get started!</p>
+                                )}
                         </motion.div>
                     )}
 
